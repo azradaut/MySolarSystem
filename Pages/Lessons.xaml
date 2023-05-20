@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MySolarSystem.Pages.Lessons"
+             Title="Lessons">
+    <VerticalStackLayout>
+        <Label 
+            Text="LESSONS!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Button
+            x:Name="btnSolarSystem"
+            Margin="20"
+            BackgroundColor="BlueViolet"
+            Text="SolarSystem"
+            TextColor="Wheat"
+            FontSize="24"/>
+
+        <Button
+            x:Name="btnMercury"
+            Margin="20"
+            BackgroundColor="BlueViolet"
+            Text="Mercury"
+            TextColor="Wheat"
+            FontSize="24"/>
+
+        <Button
+            x:Name="btnVenus"
+            Margin="20"
+            BackgroundColor="BlueViolet"
+            Text="Venus"
+            TextColor="Wheat"
+            FontSize="24"/>
+
+        <Button
+            x:Name="btnMars"
+            Margin="20"
+            BackgroundColor="BlueViolet"
+            Text="Mars"
+            TextColor="Wheat"
+            FontSize="24"/>
+    </VerticalStackLayout>
+</ContentPage>
