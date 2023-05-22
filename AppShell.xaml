@@ -16,6 +16,8 @@
                       ContentTemplate="{DataTemplate local:Lessons}" />
         <ShellContent Title="Quiz" Icon="icon_exam.svg" Route="quiz"
                       ContentTemplate="{DataTemplate local:Quiz}" />
+        <ShellContent Title="Telescope" Icon="icon_telescope.svg" Route="telescope"
+                      ContentTemplate="{DataTemplate local:Telescope}" />
     </FlyoutItem>
 
 </Shell>
