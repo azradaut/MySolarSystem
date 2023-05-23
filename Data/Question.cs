@@ -8,5 +8,6 @@ namespace MySolarSystem.Data
         public List<string> Choices { get; set; }
         public int CorrectAnswerIndex { get; set; }
         public string ImageUrl { get; set; }
+        public string SelectedChoice { get; set; }
     }
 }

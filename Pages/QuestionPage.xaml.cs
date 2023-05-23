@@ -32,7 +32,7 @@ namespace MySolarSystem.Pages
             // Optionally, you can update other UI elements based on the question
         }
 
-        private void NextButton_Clicked(object sender, EventArgs e)
+        private async void NextButton_Clicked(object sender, EventArgs e)
         {
             // Handle the user's answer and move to the next question
 
@@ -44,8 +44,22 @@ namespace MySolarSystem.Pages
                 // Check if the selected answer is correct
                 bool isCorrect = selectedAnswer == currentQuestion.Choices[currentQuestion.CorrectAnswerIndex];
 
-                // Show a pop-up indicating if the answer is correct or not
-                DisplayAlert("Answer", isCorrect ? "Correct!" : "Incorrect!", "OK");
+                if (currentQuestionIndex == questions.Count - 1)
+                {
+                    // Show a pop-up for the last question review
+                    await DisplayAlert("Answer", isCorrect ? "Correct!" : "Incorrect!", "OK");
+
+                    // Update the selected choice for the last question
+                    currentQuestion.SelectedChoice = selectedAnswer;
+                }
+                else
+                {
+                    // Show a pop-up indicating if the answer is correct or not
+                    await DisplayAlert("Answer", isCorrect ? "Correct!" : "Incorrect!", "OK");
+
+                    // Update the selected choice for the current question
+                    currentQuestion.SelectedChoice = selectedAnswer;
+                }
 
                 if (currentQuestionIndex < questions.Count - 1)
                 {
@@ -56,12 +70,17 @@ namespace MySolarSystem.Pages
                 {
                     // All questions answered, calculate score and show score page
                     int score = CalculateScore();
-                    ShowScorePage(score);
+
+                    // Show the quiz score and ask for quiz replay
+                    await DisplayAlert("Quiz Score", $"Your score: {score} out of {questions.Count}", "Ok");
+
+                    // Go back to the Home page
+                    await Navigation.PopToRootAsync();
                 }
             }
             else
             {
-                DisplayAlert("Warning", "Please select an answer", "OK");
+                await DisplayAlert("Warning", "Please select an answer", "OK");
             }
         }
 
@@ -71,9 +90,9 @@ namespace MySolarSystem.Pages
 
             foreach (var question in questions)
             {
-                if (AnswerChoicesListView.SelectedItem != null)
+                if (question.SelectedChoice != null)
                 {
-                    var selectedAnswer = AnswerChoicesListView.SelectedItem.ToString();
+                    var selectedAnswer = question.SelectedChoice;
                     var correctAnswer = question.Choices[question.CorrectAnswerIndex];
 
                     if (selectedAnswer == correctAnswer)
@@ -85,12 +104,6 @@ namespace MySolarSystem.Pages
             }
 
             return score;
-        }
-
-        private void ShowScorePage(int score)
-        {
-            // Display the score in a pop-up
-            DisplayAlert("Quiz Score", $"Your score: {score} out of {questions.Count}", "OK");
         }
 
         private void AnswerChoicesListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
