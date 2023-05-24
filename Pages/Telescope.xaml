@@ -1,0 +1,14 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:MySolarSystem.Pages"
+             mc:Ignorable="d"
+             x:Class="MySolarSystem.Pages.Telescope">
+
+    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+        <Image x:Name="nasaImage" Aspect="AspectFill" HeightRequest="300" WidthRequest="300" />
+        <Label x:Name="explanationLabel" FontSize="16" HorizontalOptions="Center" VerticalOptions="Center" />
+    </VerticalStackLayout>
+
+</ContentPage>
