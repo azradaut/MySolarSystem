@@ -13,7 +13,10 @@ public static class MauiProgram
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-			});
+                fonts.AddFont("NexaRegular.ttf", "NexaRegular");
+                fonts.AddFont("NexaHeavy.ttf", "NexaHeavy");
+                fonts.AddFont("NexaBook.ttf", "NexaBook");
+            });
 
 #if DEBUG
 		builder.Logging.AddDebug();

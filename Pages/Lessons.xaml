@@ -3,42 +3,30 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MySolarSystem.Pages.Lessons"
              Title="Lessons">
-    <VerticalStackLayout>
-        <Label 
-            Text="LESSONS!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label 
+            Text="Select a lesson" 
+            HorizontalOptions="Center"
+                Margin="5,5,5,30"/>
 
-        <Button
+            <Button
             x:Name="btnSolarSystem"
-            Margin="20"
-            BackgroundColor="BlueViolet"
-            Text="SolarSystem"
-            TextColor="Wheat"
-            FontSize="24"/>
+            Text="SolarSystem"/>
 
-        <Button
+            <Button
             x:Name="btnMercury"
-            Margin="20"
-            BackgroundColor="BlueViolet"
-            Text="Mercury"
-            TextColor="Wheat"
-            FontSize="24"/>
+            Text="Mercury"/>
 
-        <Button
+            <Button
             x:Name="btnVenus"
-            Margin="20"
-            BackgroundColor="BlueViolet"
-            Text="Venus"
-            TextColor="Wheat"
-            FontSize="24"/>
+            Text="Venus"/>
 
-        <Button
+            <Button
             x:Name="btnMars"
-            Margin="20"
-            BackgroundColor="BlueViolet"
-            Text="Mars"
-            TextColor="Wheat"
-            FontSize="24"/>
-    </VerticalStackLayout>
+            Text="Mars"/>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+    
 </ContentPage>

@@ -48,6 +48,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Fonts\NexaBook.ttf" />
+	  <None Remove="Resources\Fonts\NexaHeavy.ttf" />
+	  <None Remove="Resources\Fonts\NexaRegular.ttf" />
 	  <None Remove="Resources\Images\astronaut.svg" />
 	  <None Remove="Resources\Images\earth.svg" />
 	  <None Remove="Resources\Images\icon_books.svg" />
@@ -76,12 +79,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Pages\ScorePage.xaml.cs">
-	    <DependentUpon>ScorePage.xaml</DependentUpon>
-	  </Compile>
-	</ItemGroup>
-
-	<ItemGroup>
 	  <MauiXaml Update="Pages\Home.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -92,9 +89,6 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\Quiz.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Pages\ScorePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\SpecificLesson.xaml">

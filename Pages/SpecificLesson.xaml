@@ -3,29 +3,31 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MySolarSystem.Pages.SpecificLesson"
              Title="SpecificLesson">
-    <VerticalStackLayout>
 
+    <ScrollView>
+        <VerticalStackLayout>
 
-        <Image x:Name="lessonImage"
+            <Image x:Name="lessonImage"
                Aspect="AspectFit"
                HorizontalOptions="Center"
                Margin="30"/>
-        
+
             <Label x:Name="lessonHeading"
+                   Margin="20"
+                   FontSize="Large"
+                   HorizontalOptions="Center"/>
+            <Label x:Name="lessonparagraph1"
                    Margin="10"
                    FontSize="Large"/>
-        <Label x:Name="lessonparagraph1"
-                   Margin="10"
-                   FontSize="Large"/>
-        <Label x:Name="lessonparagraph2"
+            <Label x:Name="lessonparagraph2"
                    Margin="10"
                    FontSize="Medium"/>
 
-        <Label x:Name="lessonparagraph3"
+            <Label x:Name="lessonparagraph3"
                    Margin="10"
                    FontSize="Medium"/>
 
-
-
-    </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+    
 </ContentPage>

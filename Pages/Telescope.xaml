@@ -6,9 +6,11 @@
              mc:Ignorable="d"
              x:Class="MySolarSystem.Pages.Telescope">
 
-    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
-        <Image x:Name="nasaImage" Aspect="AspectFill" HeightRequest="300" WidthRequest="300" />
-        <Label x:Name="explanationLabel" FontSize="16" HorizontalOptions="Center" VerticalOptions="Center" />
-    </VerticalStackLayout>
-
+    <ScrollView>
+        <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+            <Image x:Name="nasaImage" Aspect="AspectFill" HeightRequest="300" WidthRequest="350" />
+            <Label x:Name="explanationLabel" HorizontalTextAlignment="Center" Margin="25" />
+        </VerticalStackLayout>
+    </ScrollView>
+    
 </ContentPage>

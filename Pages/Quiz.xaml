@@ -3,18 +3,31 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MySolarSystem.Pages.Quiz"
              Title="Quiz">
-    <VerticalStackLayout>
-        <Label 
-            Text="QUIZ!"
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label 
+            Text="Test your space smarts with 5 questions!"
+                Margin="30"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
 
-        <Button
+            <Label 
+                Margin="0, 50, 0, 0"
+            Text="Just pick the correct answer"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+            <Label 
+                Margin="30"
+            Text="Good luck, space explorer!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+            <Button
             x:Name="btnStartQuiz"
-            Margin="20"
-            BackgroundColor="BlueViolet"
-            Text="Start"
-            TextColor="Wheat"
-            FontSize="24"/>
-    </VerticalStackLayout>
+            Margin="20, 70, 20, 10"
+            Text="Start"/>
+        </VerticalStackLayout>
+    </ScrollView>
+    
 </ContentPage>
