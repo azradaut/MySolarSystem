@@ -42,7 +42,13 @@ namespace MySolarSystem.Pages
                 "solar_system" => LessonsData.SolarSystem,
                 "mercury" => LessonsData.Mercury,
                 "venus" => LessonsData.Venus,
+                "earth" => LessonsData.Earth,
                 "mars" => LessonsData.Mars,
+                "jupiter" => LessonsData.Jupiter,
+                "saturn" => LessonsData.Saturn,
+                "uranus" => LessonsData.Uranus,
+                "neptune" => LessonsData.Neptune,
+
                 _ => throw new ArgumentException()
             };
         }
