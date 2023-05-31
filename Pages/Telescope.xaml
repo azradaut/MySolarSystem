@@ -8,8 +8,22 @@
 
     <ScrollView>
         <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
-            <Image x:Name="nasaImage" Aspect="AspectFill" HeightRequest="300" WidthRequest="350" />
-            <Label x:Name="explanationLabel" HorizontalTextAlignment="Center" Margin="25" />
+
+            <Label Margin="20"
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   Text="NASA Image of the day"/>
+
+            <Image x:Name="nasaImage" 
+                   Aspect="AspectFill"
+                   HeightRequest="300" 
+                   WidthRequest="350" />
+            
+            <Label x:Name="explanationLabel" 
+                   FontSize="Medium" 
+                   HorizontalTextAlignment="Start" 
+                   Margin="20" />
         </VerticalStackLayout>
     </ScrollView>
     

@@ -15,6 +15,29 @@ namespace MySolarSystem.Data
             {
                 new Question
                 {
+                    Text = "What region is populated by millions of rocky objects, leftovers from the formation of the planets?",
+                    Choices = new List<string> { "Asteroid belt", "Oort Cloud", "Kuiper Belt", " Solar System" },
+                    CorrectAnswerIndex = 0,
+                    ImageUrl = "planets_around_sun.svg"
+                },
+
+                new Question
+                {
+                    Text = "What object was discovered in 2005 and is at least as big as Pluto?",
+                    Choices = new List<string> { "Moon", "Eris", "Saturn", "Venus" },
+                    CorrectAnswerIndex = 1,
+                    ImageUrl = "planets_around_sun.svg"
+                },
+
+                new Question
+                {
+                    Text = "What is the region beyond Pluto called, where more than 1,000 icy worlds have been discovered?",
+                    Choices = new List<string> { "Asteroid belt", "Oort Cloud", "Kuiper Belt", "Solar System" },
+                    CorrectAnswerIndex = 2,
+                    ImageUrl = "planets_around_sun.svg"
+                },
+                new Question
+                {
                     Text = "Can you name the planet in the image?",
                     Choices = new List<string> { "Neptune", "Jupiter", "Mercury", "Mars" },
                     CorrectAnswerIndex = 2,

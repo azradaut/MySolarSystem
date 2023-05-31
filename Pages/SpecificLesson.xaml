@@ -8,23 +8,19 @@
         <VerticalStackLayout>
 
             <Image x:Name="lessonImage"
-               Aspect="AspectFit"
-               HorizontalOptions="Center"
-               Margin="30"/>
+                   Aspect="AspectFit"
+                   HorizontalOptions="Center"
+                   Margin="20"/>
 
             <Label x:Name="lessonHeading"
                    Margin="20"
                    FontSize="Large"
+                   FontAttributes="Bold"
                    HorizontalOptions="Center"/>
-            <Label x:Name="lessonparagraph1"
-                   Margin="10"
-                   FontSize="Large"/>
-            <Label x:Name="lessonparagraph2"
-                   Margin="10"
-                   FontSize="Medium"/>
-
-            <Label x:Name="lessonparagraph3"
-                   Margin="10"
+            
+            <Label x:Name="lessonparagraph"
+                   Margin="20"
+                   HorizontalTextAlignment="Start"
                    FontSize="Medium"/>
 
         </VerticalStackLayout>

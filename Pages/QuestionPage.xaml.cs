@@ -47,7 +47,8 @@ namespace MySolarSystem.Pages
                 if (currentQuestionIndex == questions.Count - 1)
                 {
                     // Show a pop-up for the last question review
-                    await DisplayAlert("Answer", isCorrect ? "Correct!" : "Incorrect!", "OK");
+                    string alertMessage = isCorrect ? "Correct!" : $"Incorrect! The correct answer was: {currentQuestion.Choices[currentQuestion.CorrectAnswerIndex]}";
+                    await DisplayAlert("Answer", alertMessage, "OK");
 
                     // Update the selected choice for the last question
                     currentQuestion.SelectedChoice = selectedAnswer;
@@ -55,7 +56,8 @@ namespace MySolarSystem.Pages
                 else
                 {
                     // Show a pop-up indicating if the answer is correct or not
-                    await DisplayAlert("Answer", isCorrect ? "Correct!" : "Incorrect!", "OK");
+                    string alertMessage = isCorrect ? "Correct!" : $"Incorrect! \nThe correct answer was: \r\n\r\n{currentQuestion.Choices[currentQuestion.CorrectAnswerIndex]}";
+                    await DisplayAlert("Answer", alertMessage, "OK");
 
                     // Update the selected choice for the current question
                     currentQuestion.SelectedChoice = selectedAnswer;
@@ -71,18 +73,34 @@ namespace MySolarSystem.Pages
                     // All questions answered, calculate score and show score page
                     int score = CalculateScore();
 
-                    // Show the quiz score and ask for quiz replay
-                    await DisplayAlert("Quiz Score", $"Your score: {score} out of {questions.Count}", "Ok");
+                    string message;
+                    if (score == questions.Count)
+                    {
+                        message = "Amazing! You got all the answers correct!";
+                    }
+                    else if (score >= questions.Count / 2)
+                    {
+                        message = "Great job! You're doing well!";
+                    }
+                    else
+                    {
+                        message = "Keep practicing! You can do better!";
+                    }
+
+                    // Show the quiz score and feedback
+                    await DisplayAlert("Quiz Score", $"Your score: {score} out of {questions.Count}\n\n{message}", "OK");
 
                     // Go back to the Home page
                     await Navigation.PopToRootAsync();
                 }
+
             }
             else
             {
                 await DisplayAlert("Warning", "Please select an answer", "OK");
             }
         }
+
 
         private int CalculateScore()
         {

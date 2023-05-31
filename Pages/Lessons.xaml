@@ -6,46 +6,47 @@
     <ScrollView>
         <VerticalStackLayout>
             <Label 
-            Text="Select a lesson" 
+                Text="Select a lesson" 
                 FontSize="Large"
-            HorizontalOptions="Center"
-                Margin="5,5,5,30"/>
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                Margin="20,20,20,30"/>
 
             <Button
-            x:Name="btnSolarSystem"
-            Text="SolarSystem"/>
+                x:Name="btnSolarSystem"
+                Text="SolarSystem"/>
 
             <Button
-            x:Name="btnMercury"
-            Text="Mercury"/>
+                x:Name="btnMercury"
+                Text="Mercury"/>
 
             <Button
-            x:Name="btnVenus"
-            Text="Venus"/>
+                x:Name="btnVenus"
+                Text="Venus"/>
 
             <Button
-            x:Name="btnEarth"
-            Text="Earth"/>
+                x:Name="btnEarth"
+                Text="Earth"/>
 
             <Button
-            x:Name="btnMars"
-            Text="Mars"/>
+                x:Name="btnMars"
+                Text="Mars"/>
 
             <Button
-            x:Name="btnJupiter"
-            Text="Jupiter"/>
+                x:Name="btnJupiter"
+                Text="Jupiter"/>
 
             <Button
-            x:Name="btnSaturn"
-            Text="Saturn"/>
+                x:Name="btnSaturn"
+                Text="Saturn"/>
 
             <Button
-            x:Name="btnUranus"
-            Text="Uranus"/>
+                x:Name="btnUranus"
+                Text="Uranus"/>
 
             <Button
-            x:Name="btnNeptune"
-            Text="Neptune"/>
+                x:Name="btnNeptune"
+                Text="Neptune"/>
 
         </VerticalStackLayout>
     </ScrollView>
