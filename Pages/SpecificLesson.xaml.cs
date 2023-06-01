@@ -30,9 +30,7 @@ namespace MySolarSystem.Pages
 
             lessonImage.Source = lesson.Image;
             lessonHeading.Text = lesson.Heading;
-            lessonparagraph1.Text = lesson.Paragraph1;
-            lessonparagraph2.Text = lesson.Paragraph2;
-            lessonparagraph3.Text = lesson.Paragraph3;
+            lessonparagraph.Text = lesson.Paragraph;
         }
 
         Lesson FindLessonData(string specificLessonName)
@@ -42,7 +40,13 @@ namespace MySolarSystem.Pages
                 "solar_system" => LessonsData.SolarSystem,
                 "mercury" => LessonsData.Mercury,
                 "venus" => LessonsData.Venus,
+                "earth" => LessonsData.Earth,
                 "mars" => LessonsData.Mars,
+                "jupiter" => LessonsData.Jupiter,
+                "saturn" => LessonsData.Saturn,
+                "uranus" => LessonsData.Uranus,
+                "neptune" => LessonsData.Neptune,
+
                 _ => throw new ArgumentException()
             };
         }

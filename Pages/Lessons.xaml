@@ -3,42 +3,52 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MySolarSystem.Pages.Lessons"
              Title="Lessons">
-    <VerticalStackLayout>
-        <Label 
-            Text="LESSONS!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label 
+                Text="Select a lesson" 
+                FontSize="Large"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                Margin="20,20,20,30"/>
 
-        <Button
-            x:Name="btnSolarSystem"
-            Margin="20"
-            BackgroundColor="BlueViolet"
-            Text="SolarSystem"
-            TextColor="Wheat"
-            FontSize="24"/>
+            <Button
+                x:Name="btnSolarSystem"
+                Text="SolarSystem"/>
 
-        <Button
-            x:Name="btnMercury"
-            Margin="20"
-            BackgroundColor="BlueViolet"
-            Text="Mercury"
-            TextColor="Wheat"
-            FontSize="24"/>
+            <Button
+                x:Name="btnMercury"
+                Text="Mercury"/>
 
-        <Button
-            x:Name="btnVenus"
-            Margin="20"
-            BackgroundColor="BlueViolet"
-            Text="Venus"
-            TextColor="Wheat"
-            FontSize="24"/>
+            <Button
+                x:Name="btnVenus"
+                Text="Venus"/>
 
-        <Button
-            x:Name="btnMars"
-            Margin="20"
-            BackgroundColor="BlueViolet"
-            Text="Mars"
-            TextColor="Wheat"
-            FontSize="24"/>
-    </VerticalStackLayout>
+            <Button
+                x:Name="btnEarth"
+                Text="Earth"/>
+
+            <Button
+                x:Name="btnMars"
+                Text="Mars"/>
+
+            <Button
+                x:Name="btnJupiter"
+                Text="Jupiter"/>
+
+            <Button
+                x:Name="btnSaturn"
+                Text="Saturn"/>
+
+            <Button
+                x:Name="btnUranus"
+                Text="Uranus"/>
+
+            <Button
+                x:Name="btnNeptune"
+                Text="Neptune"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+    
 </ContentPage>
