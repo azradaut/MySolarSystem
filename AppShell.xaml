@@ -10,7 +10,7 @@
     <FlyoutItem Title="Home" Icon="icon_home.svg">
         <ShellContent Title="Home" Icon="icon_house.svg" Route="home"
                       ContentTemplate="{DataTemplate local:Home}"/>
-        <ShellContent Title="Lesson" Icon="icon_books.svg" Route="lessons"
+        <ShellContent Title="Lessons" Icon="icon_books.svg" Route="lessons"
                       ContentTemplate="{DataTemplate local:Lessons}" />
         <ShellContent Title="Quiz" Icon="icon_exam.svg" Route="quiz"
                       ContentTemplate="{DataTemplate local:Quiz}" />
