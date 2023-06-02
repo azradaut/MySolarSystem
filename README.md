@@ -14,8 +14,7 @@
 
 ## Demo
 
-[![Demo Video](https://vimeo.com/<iframe src="https://player.vimeo.com/video/832528037?h=6ec49d0ca2&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1440" height="2560" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="MySolarSystem_Demo"></iframe>)](https://vimeo.com/<iframe src="https://player.vimeo.com/video/832528037?h=6ec49d0ca2&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1440" height="2560" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="MySolarSystem_Demo"></iframe>)
-
+[![Demo Video](https://vimeo.com/832528037)](https://vimeo.com/832528037)
 
 
 ## Prerequisites
