@@ -10,43 +10,53 @@
                 FontSize="Large"
                 FontAttributes="Bold"
                 HorizontalOptions="Center"
-                Margin="20,20,20,30"/>
+                Margin="20,20,20,30"
+                SemanticProperties.HeadingLevel="Level1"/>
 
             <Button
                 x:Name="btnSolarSystem"
-                Text="SolarSystem"/>
+                Text="SolarSystem"
+                SemanticProperties.Hint="Click to start the lesson"/>
 
             <Button
                 x:Name="btnMercury"
-                Text="Mercury"/>
+                Text="Mercury"
+                SemanticProperties.Hint="Click to start the lesson"/>
 
             <Button
                 x:Name="btnVenus"
-                Text="Venus"/>
+                Text="Venus"
+                SemanticProperties.Hint="Click to start the lesson"/>
 
             <Button
                 x:Name="btnEarth"
-                Text="Earth"/>
+                Text="Earth"
+                SemanticProperties.Hint="Click to start the lesson"/>
 
             <Button
                 x:Name="btnMars"
-                Text="Mars"/>
+                Text="Mars"
+                SemanticProperties.Hint="Click to start the lesson"/>
 
             <Button
                 x:Name="btnJupiter"
-                Text="Jupiter"/>
+                Text="Jupiter"
+                SemanticProperties.Hint="Click to start the lesson"/>
 
             <Button
                 x:Name="btnSaturn"
-                Text="Saturn"/>
+                Text="Saturn"
+                SemanticProperties.Hint="Click to start the lesson"/>
 
             <Button
                 x:Name="btnUranus"
-                Text="Uranus"/>
+                Text="Uranus"
+                SemanticProperties.Hint="Click to start the lesson"/>
 
             <Button
                 x:Name="btnNeptune"
-                Text="Neptune"/>
+                Text="Neptune"
+                SemanticProperties.Hint="Click to start the lesson"/>
 
         </VerticalStackLayout>
     </ScrollView>

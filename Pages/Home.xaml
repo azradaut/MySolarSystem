@@ -7,16 +7,18 @@
         <VerticalStackLayout>
             <Label 
                 Margin="20"
-            Text="MY SOLAR SYSTEM"
-                HorizontalTextAlignment="Center"
-                
-            FontSize="48"
+                Text="MY SOLAR SYSTEM"
+                HorizontalTextAlignment="Center"               
+                FontSize="48"
                 FontAttributes="Bold"
                 VerticalOptions="CenterAndExpand"
+                SemanticProperties.HeadingLevel="Level1"
              />
 
             <Image
-                Source="astronaut.svg"/>
+                Source="astronaut.svg"
+                SemanticProperties.Description="Meet our adorable illustrated astronaut in a charming white spacesuit and helmet, happily holding three orange balloons,
+                eager to lead young explorers on captivating adventures through the enchanting solar system."/>
 
         </VerticalStackLayout>
 

@@ -8,7 +8,7 @@ namespace MySolarSystem.Pages
 {
     public partial class Telescope : ContentPage
     {
-        private const string NasaApiUrl = "https://api.nasa.gov/planetary/apod?api_key=9ovGga9KxlnXwBgu9zEkuN7XYOe1JBuvWuoValgJ";
+        private const string NasaApiUrl = "https://api.nasa.gov/planetary/apod?api_key=Whye801lbl12E2UL7TKblEQwj21cMc43CrVkeX0o";
 
         public Telescope()
         {
@@ -23,18 +23,20 @@ namespace MySolarSystem.Pages
                 using (HttpClient client = new HttpClient())
                 {
                     HttpResponseMessage response = await client.GetAsync(NasaApiUrl);
+                    // Check if the HTTP request was successful
                     if (response.IsSuccessStatusCode)
                     {
                         string json = await response.Content.ReadAsStringAsync();
                         NasaPicture picture = JsonConvert.DeserializeObject<NasaPicture>(json);
 
-                        // Update the UI to display the image
+                        // Display the image and the explanation
                         nasaImage.Source = picture.Url;
                         explanationLabel.Text = picture.Explanation;
+                        SemanticProperties.SetDescription(explanationLabel, picture.Explanation);
                     }
                     else
                     {
-                        // Handle the error condition
+                        // Handle the error condition when the request fails
                         Console.WriteLine("Failed to fetch NASA Picture of the Day");
                     }
                 }

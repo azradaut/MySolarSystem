@@ -9,13 +9,17 @@
    
     <FlyoutItem Title="Home" Icon="icon_home.svg">
         <ShellContent Title="Home" Icon="icon_house.svg" Route="home"
-                      ContentTemplate="{DataTemplate local:Home}"/>
+                      ContentTemplate="{DataTemplate local:Home}"
+                      SemanticProperties.Hint="Navigate to the home page"/>
         <ShellContent Title="Lessons" Icon="icon_books.svg" Route="lessons"
-                      ContentTemplate="{DataTemplate local:Lessons}" />
+                      ContentTemplate="{DataTemplate local:Lessons}"
+                      SemanticProperties.Hint="Navigate to the lessons page"/>
         <ShellContent Title="Quiz" Icon="icon_exam.svg" Route="quiz"
-                      ContentTemplate="{DataTemplate local:Quiz}" />
+                      ContentTemplate="{DataTemplate local:Quiz}"
+                      SemanticProperties.Hint="Navigate to the quiz page"/>
         <ShellContent Title="Telescope" Icon="icon_telescope.svg" Route="telescope"
-                      ContentTemplate="{DataTemplate local:Telescope}" />
+                      ContentTemplate="{DataTemplate local:Telescope}"
+                      SemanticProperties.Hint="Navigate to the telescope page"/>
         
     </FlyoutItem>
 
