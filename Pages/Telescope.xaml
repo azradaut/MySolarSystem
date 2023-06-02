@@ -13,12 +13,14 @@
                    FontSize="Large"
                    FontAttributes="Bold"
                    HorizontalOptions="Center"
-                   Text="NASA Image of the day"/>
+                   Text="NASA Image of the day"
+                   SemanticProperties.HeadingLevel="Level1"/>
 
             <Image x:Name="nasaImage" 
                    Aspect="AspectFill"
                    HeightRequest="300" 
-                   WidthRequest="350" />
+                   WidthRequest="350"
+                   SemanticProperties.Description="Image of the day"/>
             
             <Label x:Name="explanationLabel" 
                    FontSize="Medium" 

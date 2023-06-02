@@ -11,26 +11,30 @@
                 FontSize="Large"
                 FontAttributes="Bold"
                 VerticalOptions="Center" 
-                HorizontalTextAlignment="Center" />
+                HorizontalTextAlignment="Center"
+                SemanticProperties.HeadingLevel="Level1"/>
 
             <Label 
                 Margin="0, 50, 0, 0"
                 Text="Just pick the correct answer"
                 FontSize="Large"
                 VerticalOptions="Center" 
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center"
+                SemanticProperties.HeadingLevel="Level2"/>
 
             <Label 
                 Margin="30"
                 FontSize="Large"
                 Text="Good luck, space explorer!"
                 VerticalOptions="Center" 
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center"
+                SemanticProperties.HeadingLevel="Level3"/>
 
             <Button
                 x:Name="btnStartQuiz"
                 Margin="20, 70, 20, 10"
-                Text="Start"/>
+                Text="Start"
+                SemanticProperties.Hint="Click to start the quiz"/>
         </VerticalStackLayout>
     </ScrollView>
     

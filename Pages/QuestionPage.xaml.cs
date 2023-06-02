@@ -29,7 +29,10 @@ namespace MySolarSystem.Pages
             AnswerChoicesListView.ItemsSource = question.Choices;
             AnswerChoicesListView.SelectedItem = null; // Clear the selected item
 
-            // Optionally, you can update other UI elements based on the question
+            // Set accessibility properties
+            QuestionImage.SetValue(SemanticProperties.DescriptionProperty, $"Image related to the question: {question.Text}");
+            QuestionTextLabel.SetValue(SemanticProperties.HeadingLevelProperty, SemanticHeadingLevel.Level1);
+            AnswerChoicesListView.SetValue(SemanticProperties.HintProperty, "Choose an answer option");
         }
 
         private async void NextButton_Clicked(object sender, EventArgs e)
@@ -40,26 +43,20 @@ namespace MySolarSystem.Pages
             {
                 var selectedAnswer = AnswerChoicesListView.SelectedItem.ToString();
                 var currentQuestion = questions[currentQuestionIndex];
-
-                // Check if the selected answer is correct
                 bool isCorrect = selectedAnswer == currentQuestion.Choices[currentQuestion.CorrectAnswerIndex];
 
                 if (currentQuestionIndex == questions.Count - 1)
                 {
-                    // Show a pop-up for the last question review
+                    
                     string alertMessage = isCorrect ? "Correct!" : $"Incorrect! The correct answer was: {currentQuestion.Choices[currentQuestion.CorrectAnswerIndex]}";
                     await DisplayAlert("Answer", alertMessage, "OK");
-
-                    // Update the selected choice for the last question
                     currentQuestion.SelectedChoice = selectedAnswer;
                 }
                 else
                 {
-                    // Show a pop-up indicating if the answer is correct or not
                     string alertMessage = isCorrect ? "Correct!" : $"Incorrect! \nThe correct answer was: \r\n\r\n{currentQuestion.Choices[currentQuestion.CorrectAnswerIndex]}";
                     await DisplayAlert("Answer", alertMessage, "OK");
 
-                    // Update the selected choice for the current question
                     currentQuestion.SelectedChoice = selectedAnswer;
                 }
 
@@ -70,7 +67,7 @@ namespace MySolarSystem.Pages
                 }
                 else
                 {
-                    // All questions answered, calculate score and show score page
+                    // All questions answered --> calculate score and show score page
                     int score = CalculateScore();
 
                     string message;
@@ -86,11 +83,9 @@ namespace MySolarSystem.Pages
                     {
                         message = "Keep practicing! You can do better!";
                     }
-
-                    // Show the quiz score and feedback
                     await DisplayAlert("Quiz Score", $"Your score: {score} out of {questions.Count}\n\n{message}", "OK");
 
-                    // Go back to the Home page
+                    // Go back to the Quiz page
                     await Navigation.PopToRootAsync();
                 }
 
@@ -115,7 +110,6 @@ namespace MySolarSystem.Pages
 
                     if (selectedAnswer == correctAnswer)
                     {
-                        // Increase the score for each correct answer
                         score++;
                     }
                 }
@@ -127,7 +121,14 @@ namespace MySolarSystem.Pages
         private void AnswerChoicesListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             // Handle the selected answer choice
-            // You can access the selected item using e.SelectedItem
+
+            // Set accessibility properties for the selected answer choice
+            var selectedAnswerChoice = e.SelectedItem as string;
+            if (selectedAnswerChoice != null)
+            {
+                AnswerChoicesListView.SetValue(SemanticProperties.DescriptionProperty, $"Selected answer: {selectedAnswerChoice}");
+            }
+
         }
     }
 }
