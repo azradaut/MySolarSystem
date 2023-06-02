@@ -14,7 +14,7 @@
 
 ## Demo
 
-[![Demo Video](https://vimeo.com/832528037)](https://vimeo.com/832528037)
+[![MySolarSystem Vimeo Demo](https://vimeo.com/832528037)](https://vimeo.com/832528037)
 
 
 ## Prerequisites
