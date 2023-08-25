@@ -1,6 +1,6 @@
 # MySolarSystem
 
-### MySolarSystem is an educational app designed to provide an interactive and engaging learning experience about the solar system for children. This repository contains the source code for the MySolarSystem app, developed using the .NET MAUI framework. This is a project for a university course called "Development of Applications for Mobile Devices."
+### MySolarSystem is an educational app designed to provide an interactive and engaging learning experience about the solar system for children and it supports screen readers. This repository contains the source code for the MySolarSystem app, developed using the .NET MAUI framework. This is a project for a university course called "Development of Applications for Mobile Devices."
 
 ## Features
 
